@@ -3,7 +3,13 @@
 @section("content")
 
     <div class="container mt-4">
-            @foreach ($posts as $post)
+        <div class="mb-4">
+            <a href="{{route('posts.create')}}" class="btn btn-primary">
+                投稿を新規作成する
+            </a>
+        </div>
+        
+        @foreach ($posts as $post)
         <div class="card mb-4">
             <div class="card-header mb-2">
                 {{ $post->title }}
@@ -21,7 +27,6 @@
             </div>
         </div>
         @endforeach
-
     </div>
 
 

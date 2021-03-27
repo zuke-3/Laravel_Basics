@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/','Postscontroller@index')->name('top');
+Route::get('/','PostsController@index')->name('top');
 
-
+Route::resource('posts', 'PostsController', ['only' =>['create', 'store']]);
